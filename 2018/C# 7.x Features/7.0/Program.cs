@@ -11,37 +11,55 @@ namespace _7._0
         static void Main(string[] args)
         {
 
-            #region OutVariable1
-            int result;
-            string answer = "42";
+            var currentExample = Examples.OutVariable2;
 
-            if (int.TryParse(answer, out result))
-                Console.WriteLine($"The answer to the ultimate question of life, the universe and everything is {result}!");
-            else
-                Console.WriteLine("Nope");
+
+            #region OutVariable1
+            if (currentExample == Examples.OutVariable1)
+            {
+
+                int result;
+                string answer = "42";
+
+                if (int.TryParse(answer, out result))
+                    Console.WriteLine($"The answer to the ultimate question of life, the universe and everything is {result}!");
+                else
+                    Console.WriteLine("Nope");
+
+            }
             #endregion
 
 
             #region OutVariable2
-            string answer2 = "42";
 
-            //Console.WriteLine(result2);
+            if (currentExample == Examples.OutVariable2)
+            {
+                string answer2 = "42";
 
-            if (int.TryParse(answer2, out var result2))
-                Console.WriteLine($"The answer to the ultimate question of life, the universe and everything is {result2}!");
-            else
-                Console.WriteLine("Nope");
+                //Console.WriteLine(result2);
+
+                if (int.TryParse(answer2, out var result2))
+                    Console.WriteLine($"The answer to the ultimate question of life, the universe and everything is {result2}!");
+                else
+                    Console.WriteLine("Nope");
 
 
-            Console.WriteLine($"Result: {result2}");
+                Console.WriteLine($"Result: {result2}");
+            }
 
             #endregion
+
+
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }
     }
 
-
+    public enum Examples
+    {
+        OutVariable1,
+        OutVariable2
+    }
 
 }
